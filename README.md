@@ -14,19 +14,19 @@ Here is the [introduction of Guerzli](https://github.com/google/guetzli/blob/mas
 
 **Clone the script**
 ```python
-$ git clone https://github.com/JonyFang/guetzli-img-compression
-$ cd guetzli-img-compression
+git clone https://github.com/JonyFang/guetzli-img-compression
+cd guetzli-img-compression
 ```
 
 **Use the script**
 ```python
-$ python guetzli_img_compression.py <folder_path>
+python guetzli_img_compression.py <folder_path>
 ```
 
 or
 
 ```python
-$ python guetzli_img_compression.py <file_path>
+python guetzli_img_compression.py <file_path>
 ```
 
 # Author
