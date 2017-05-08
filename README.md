@@ -1,6 +1,6 @@
 # Guetzli Img Compression
 
-`Guetzli Img Compression` is a script in Python, builings for Google's [Guetzli](https://github.com/google/guetzli).
+`Guetzli Img Compression` is a script in Python, buildings for Google's [Guetzli](https://github.com/google/guetzli).
 
 Here is the [introduction of Guerzli](https://github.com/google/guetzli/blob/master/README.md#introduction).
 
