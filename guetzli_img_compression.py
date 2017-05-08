@@ -5,7 +5,7 @@ import sys
 import imghdr
 
 source = sys.argv[1]
-TYPES = ('jpeg', 'png', 'jpg')
+TYPES = ('.jpeg', '.png', '.jpg')
 
 def convert_a_img(img_file):
 	filename = os.path.split(img_file)[1]
@@ -19,7 +19,8 @@ def main():
 	if os.path.isdir(source):
 		for root, dirs, files in os.walk(source):
 			for a_file in files:
-				if imghdr.what(url) in TYPES:
+				suffix = os.path.splitext(a_file)[1]
+				if suffix in TYPES:
 					convert_a_img(os.path.join(root, a_file))
 					pass
 
