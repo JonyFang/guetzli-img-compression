@@ -2,7 +2,6 @@
 import os
 import subprocess
 import sys
-import imghdr
 
 source = sys.argv[1]
 TYPES = ('.jpeg', '.png', '.jpg')
