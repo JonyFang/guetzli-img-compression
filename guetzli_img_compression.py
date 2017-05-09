@@ -13,11 +13,12 @@ def ensure_dir():
 
 def convert_a_img(img_file):
 	file = os.path.split(img_file)[1]
-	filename = os.path.splitext(file)[0]
+	folder_path = os.path.split(img_file)[0]
+	name = os.path.splitext(file)[0]
 	suffix = os.path.splitext(file)[1]
-	output_path = os.path.join(source, 'output')
+	output_path = os.path.join(folder_path, 'output')
     
-	url_out = os.path.join(output_path, filename + '_mini' + suffix)
+	url_out = os.path.join(output_path, name + '_mini' + suffix)
 
 	subprocess.call(['guetzli', '--quality', '84', '--verbose', img_file, url_out])
 ###########################################################################
