@@ -7,8 +7,11 @@ source = sys.argv[1]
 TYPES = ('.jpeg', '.png', '.jpg')
 
 def convert_a_img(img_file):
-	filename = os.path.split(img_file)[1]
-	url_out = os.path.join(source, '-'+filename)
+	file = os.path.split(img_file)[1]
+	filename = os.path.splitext(file)[0]
+	suffix = os.path.splitext(file)[1]
+    
+	url_out = os.path.join(source, filename + '_mini' + suffix)
 
 	subprocess.call(['guetzli', '--quality', '84', '--verbose', img_file, url_out])
 ###########################################################################
