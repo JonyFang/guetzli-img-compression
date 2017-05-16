@@ -35,6 +35,7 @@ def main():
 					pass
 
 	elif os.path.isfile(source):
+		ensure_dir()
 		convert_a_img(source)
 	
 	else:
