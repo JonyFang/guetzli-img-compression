@@ -6,8 +6,9 @@ import sys
 source = sys.argv[1]
 TYPES = ('.jpeg', '.png', '.jpg')
 
-def ensure_dir():
-	dir_path = os.path.join(source, 'output')
+def ensure_dir(img_file):
+	folder_path = os.path.split(img_file)[0]
+	dir_path = os.path.join(folder_path, 'output')
 	if not os.path.exists(dir_path):
 		os.makedirs(dir_path)
 
@@ -30,12 +31,12 @@ def main():
 			for a_file in files:
 				suffix = os.path.splitext(a_file)[1]
 				if suffix in TYPES:
-					ensure_dir()
+					ensure_dir(os.path.join(root, a_file))
 					convert_a_img(os.path.join(root, a_file))
 					pass
 
 	elif os.path.isfile(source):
-		ensure_dir()
+		ensure_dir(source)
 		convert_a_img(source)
 	
 	else:
